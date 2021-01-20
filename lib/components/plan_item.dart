@@ -20,7 +20,7 @@ class PlanItem extends StatelessWidget {
           // crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.fromLTRB(22.0, 0.0, 15.0, 0.0),
+              padding: EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 0.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -37,7 +37,7 @@ class PlanItem extends StatelessWidget {
                               borderRadius: BorderRadius.circular(100),
                             ),
                           ),
-                          SizedBox(width: 15.0),
+                          SizedBox(width: 10.0),
                           Text(
                             '2021 자이스토리 수학Ⅱ 6문제씩!',
                             style: TextStyle(
@@ -52,7 +52,7 @@ class PlanItem extends StatelessWidget {
                       ),
                       Row(
                         children: <Widget>[
-                          SizedBox(width: 27.0),
+                          SizedBox(width: 20.0),
                           Icon(
                             MIcon.riCheckLine,
                             size: 14.0,

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart' hide CupertinoSliverNavigationBar;
 import 'package:flutter/material.dart';
 import 'package:flutter_remixicon/flutter_remixicon.dart';
+import 'package:stoodi_ui/components/add_plan.dart';
 import 'package:stoodi_ui/components/nav_bar.dart';
 import 'package:stoodi_ui/components/plan_item.dart';
 
@@ -32,21 +33,29 @@ class _TodayPageState extends State<TodayPage> {
           slivers: <Widget>[
             CupertinoSliverNavigationBar(
               border: null,
-              backgroundColor: Color(0xFFF4F5F6),
+              // opaque: ,
+              backgroundColor: Color(0xCCF4F5F6),
               leading: CupertinoButton(
                   padding: EdgeInsetsDirectional.fromSTEB(5.0, 0, 0, 5.0),
                   child: Icon(
                     MIcon.riMenu4Line,
-                    size: 28.0,
+                    size: 24.0,
                   ),
                   onPressed: () {}),
               trailing: CupertinoButton(
                 padding: EdgeInsetsDirectional.fromSTEB(0, 0, 5.0, 5.0),
                 child: Icon(
                   MIcon.riAddLine,
-                  size: 28.0,
+                  size: 24.0,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                      builder: (context) => AddPlan(),
+                    ),
+                  );
+                },
               ),
               middle: AnimatedOpacity(
                 opacity: _offset >= 45 ? 1.0 : 0.0,
@@ -186,4 +195,3 @@ class _TodayPageState extends State<TodayPage> {
         ));
   }
 }
-
