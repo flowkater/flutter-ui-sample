@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_remixicon/flutter_remixicon.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:stoodi_ui/components/category_item.dart';
-import 'package:stoodi_ui/components/plan_item.dart';
 
+// Select Category
 class SelectCategoryDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
