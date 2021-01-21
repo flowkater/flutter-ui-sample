@@ -778,7 +778,7 @@ class _LargeTitleNavigationBarSliverDelegate
   double get minExtent => persistentHeight;
 
   @override
-  double get maxExtent => persistentHeight + 80.0;
+  double get maxExtent => persistentHeight + 70.0;
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {

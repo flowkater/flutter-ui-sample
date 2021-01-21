@@ -26,15 +26,15 @@ class _TodayPageState extends State<TodayPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CupertinoPageScaffold(
         backgroundColor: Color(0xFFF4F5F6),
-        body: CustomScrollView(
+        child: CustomScrollView(
           controller: _controller,
           slivers: <Widget>[
             CupertinoSliverNavigationBar(
               border: null,
-              // opaque: ,
-              backgroundColor: Color(0xCCF4F5F6),
+              backgroundColor: _offset >= 45 ? Color(0xCCF4F5F6) : Color(0xFFF4F5F6),
+              // backgroundColor: Color(0xFFF4F5F6),
               leading: CupertinoButton(
                   padding: EdgeInsetsDirectional.fromSTEB(5.0, 0, 0, 5.0),
                   child: Icon(
@@ -53,6 +53,7 @@ class _TodayPageState extends State<TodayPage> {
                     context,
                     CupertinoPageRoute(
                       builder: (context) => AddPlan(),
+                      fullscreenDialog: true,
                     ),
                   );
                 },
@@ -111,6 +112,7 @@ class _TodayPageState extends State<TodayPage> {
                       EdgeInsets.symmetric(vertical: 0.0, horizontal: 15.0),
                   height: 215.0,
                   child: Card(
+                    elevation: 0.0,
                     semanticContainer: true,
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     child: Container(
@@ -169,26 +171,30 @@ class _TodayPageState extends State<TodayPage> {
                     ),
                   )),
             ),
-            SliverList(
-              delegate: SliverChildListDelegate(
-                [
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                  PlanItem(),
-                ],
+            SliverSafeArea(
+              top: false,
+              minimum: const EdgeInsets.only(top: 8),
+              sliver: SliverList(
+                delegate: SliverChildListDelegate(
+                  [
+                    SizedBox(
+                      height: 10.0,
+                    ),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                    PlanItem(),
+                  ],
+                ),
               ),
             ),
           ],

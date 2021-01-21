@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart' hide CupertinoSliverNavigationBar;
 import 'package:flutter/material.dart';
 import 'package:flutter_remixicon/flutter_remixicon.dart';
+import 'package:stoodi_ui/page/calendar.dart';
+import 'package:stoodi_ui/page/settings.dart';
 import 'package:stoodi_ui/page/today.dart';
 
 void main() {
@@ -42,28 +44,12 @@ class MainWidget extends StatelessWidget {
             case 0:
               return TodayPage();
             case 1:
-              return SecondWidget();
+              return CalendarPage();
             case 2:
-              return ThirdWidget();
+              return Settings();
             default:
               return TodayPage();
           }
         });
-  }
-}
-
-class SecondWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Center(child: Text("캘린더"));
-  }
-}
-
-class ThirdWidget extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Center(child: Text("설정"));
   }
 }
