@@ -8,6 +8,7 @@ class SelectCategoryDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
+      resizeToAvoidBottomInset: false,
       child: Container(
         height: MediaQuery.of(context).size.height * 0.9,
         child: Column(
@@ -44,7 +45,7 @@ class SelectCategoryDialog extends StatelessWidget {
                   padding: EdgeInsets.only(left: 10.0),
                   prefix: Padding(
                     padding: const EdgeInsets.only(left: 15.0, right: 5.0),
-                    child: Icon(MIcon.riSearch2Line),
+                    child: Icon(MIcon.riSearchLine),
                   ),
                   decoration: BoxDecoration(
                     color: Color(0xFFF6F7F9),
