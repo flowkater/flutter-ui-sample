@@ -3,7 +3,6 @@ import 'package:flutter_remixicon/flutter_remixicon.dart';
 import 'package:flutter/material.dart';
 
 class PlanItem extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Container(
